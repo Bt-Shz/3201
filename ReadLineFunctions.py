@@ -17,13 +17,13 @@ def read_line(sock):
 
 def read_until_hash(sock):
     """
-    Read lines from the socket until '#' is encountered.
-    Returns a list of lines (without the '#').
+    Read lines from the socket until '
+    Returns a list of lines (without the '
     """
     lines = []
     while True:
         line = read_line(sock)
-        if line == "#":
+        if line == "
             break
         lines.append(line)
     return lines

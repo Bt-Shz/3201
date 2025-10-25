@@ -9,7 +9,7 @@ def handle_add(sock):
     while True:
         line = input()
         send_command(sock, line)
-        if line == "
+        if line == "":
             break
 
     
@@ -37,7 +37,7 @@ def handle_remove(sock):
     while True:
         line = input()
         send_command(sock, line)
-        if line == "
+        if line == "":
             break
 
     
@@ -53,7 +53,7 @@ def handle_mark(sock):
     while True:
         line = input()
         send_command(sock, line)
-        if line == "
+        if line == "":
             break
 
     

@@ -11,7 +11,7 @@ from ClientCommandHandles import (
 
 
 def main():
-    
+       
     if len(sys.argv) != 3:
         print("Usage: python3 ToDoTracketClient.py <server_ip> <server_port>")
         sys.exit(1)

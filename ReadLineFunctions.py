@@ -23,7 +23,7 @@ def read_until_hash(sock):
     lines = []
     while True:
         line = read_line(sock)
-        if line == "
+        if line == "":
             break
         lines.append(line)
     return lines

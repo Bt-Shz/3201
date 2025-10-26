@@ -14,7 +14,7 @@ def add_command(sock):
     while True:
         line = input()
         send_command(sock, line)
-        if line == "":
+        if line == "#":
             break
 
     response = read_line(sock)
@@ -36,7 +36,7 @@ def remove_command(sock):
     while True:
         line = input()
         send_command(sock, line)
-        if line == "":
+        if line == "#":
             break
 
     response = read_line(sock)
@@ -50,7 +50,7 @@ def mark_command(sock):
     while True:
         line = input()
         send_command(sock, line)
-        if line == "":
+        if line == "#":
             break
 
     response = read_line(sock)

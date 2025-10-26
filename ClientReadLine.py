@@ -1,9 +1,8 @@
+# this file contains all helper functions that read data from socket
 
+
+# reads line from socket `sock` until `\n`. Then, returns that line as a string.
 def read_line(sock):
-    """
-    Read a line from the socket until '\n' is encountered.
-    Returns the line as a string (without '\n').
-    """
     line = b""
     while True:
         chunk = sock.recv(1)
@@ -15,17 +14,12 @@ def read_line(sock):
     return line.decode("utf-8").strip()
 
 
+# reads lines from socket `sock` until `#`. Then, returns a list of those lines as list of strings.
 def read_until_hash(sock):
-    """
-    Read lines from the socket until '
-    Returns a list of lines (without the '
-    """
     lines = []
     while True:
         line = read_line(sock)
-        if line == "":
+        if line == "#":
             break
         lines.append(line)
     return lines
-
-
